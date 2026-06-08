@@ -250,9 +250,9 @@ if __name__ == "__main__":
     import textwrap
 
     def _run_test(name: str, log: str) -> None:
-        print(f"{'─' * 60}")
+        print(f"{'-' * 60}")
         print(f"  TEST: {name}")
-        print(f"{'─' * 60}")
+        print(f"{'-' * 60}")
         result = detect_bug(log)
         print(json.dumps(result, indent=2))
         files = extract_affected_files(log)
@@ -307,5 +307,5 @@ if __name__ == "__main__":
     )
 
     print("=" * 60)
-    print("  All 3 test cases executed ✓")
+    print("  All 3 test cases executed [OK]")
     print("=" * 60)
