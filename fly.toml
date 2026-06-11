@@ -1,0 +1,23 @@
+# fly.toml — Fly.io deployment configuration for Autopsy
+# See https://fly.io/docs/reference/configuration/
+
+app = 'autopsy-autodebug'
+primary_region = 'sin'  # Singapore — closest to India
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1

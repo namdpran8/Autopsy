@@ -78,7 +78,7 @@ Open `.env` and fill in your values:
 ### Start the server locally
 
 ```bash
-uvicorn main:app --reload --port 8080
+uvicorn api.main:app --reload --port 8080
 ```
 
 ### Example: analyze a failed pipeline
